@@ -1,5 +1,9 @@
 # ImageFusionandStitchingbasedSingleImageDehazing
 
+![pic](pic/flowchart.png)
+
+
+
 There are some examples which are compared with other methods.
 
 | Foggy | He[1] | Fattal[2] | Chen[3] | Berman[4] |  Ours |
