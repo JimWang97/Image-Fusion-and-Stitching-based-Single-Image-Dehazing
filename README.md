@@ -1,6 +1,6 @@
 # ImageFusionandStitchingbasedSingleImageDehazing
 
-Since this paper is under review, I can only disclose part of the experimental results. I will disclose the code after the paper is accepted.
+Since this paper is under review, I can only show part of the experimental results. I will open the source code after the paper is accepted.
 
 ![pic](pic/flowchart.png)
 
