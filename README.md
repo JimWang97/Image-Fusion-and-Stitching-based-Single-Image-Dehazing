@@ -1,4 +1,4 @@
-# ImageFusionandStitchingbasedSingleImageDehazing
+# Image Fusion and Stitching based Single Image Dehazing
 
 
 ![pic](pic/flowchart.png)
