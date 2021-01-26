@@ -1,0 +1,21 @@
+function hh=sobelweight(I)
+     I1=I(:,:,1);
+     I2=I(:,:,2);
+     I3=I(:,:,3);
+     [H,W,~]=size(I);
+     h1=imgradient(I1,'sobel');
+     h2=imgradient(I2,'sobel');
+     h3=imgradient(I3,'sobel');
+%      h1=colfilt(h1,[3 3],'sliding',@mean);
+%      h2=colfilt(h2,[3 3],'sliding',@mean);
+%      h3=colfilt(h3,[3 3],'sliding',@mean);
+     hh=sqrt(h1.^2+h2.^2+h3.^2);
+     s=reshape(hh,H*W,1);
+     HH=sort(s);
+     w=HH(round(0.9*H*W),1);
+     hh(hh>w)=w;
+     hh=hh./w;
+     hh=(0.2-hh)*5;
+     hh(hh<=0.6)=0;
+%      I=rgb2gray(I);
+%      hh=guidedfilter(I,hh,30,1e-6);

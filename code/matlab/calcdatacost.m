@@ -1,0 +1,9 @@
+function datacost=calcdatacost(ground,easyout,input,sz)
+easyout=easyout*255;
+ground=ground*255;
+input=input*255;
+X=sqrt((easyout(:,:,1)-input(:,:,1)).^2+(easyout(:,:,2)-input(:,:,2)).^2+(easyout(:,:,3)-input(:,:,3)).^2);
+Y=sqrt((easyout(:,:,1)-ground(:,:,1)).^2+(easyout(:,:,2)-ground(:,:,2)).^2+(easyout(:,:,3)-ground(:,:,3)).^2);
+datacost=zeros(sz,2);
+datacost(:,1)=reshape(Y,[sz 1]);
+datacost(:,2)=reshape(X,[sz 1]);
